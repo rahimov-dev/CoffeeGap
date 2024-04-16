@@ -5,7 +5,7 @@ name: PR CI
 
 on:  
   pull_request:
-    branches: [ "main", "development" ]
+    branches: [ "main", "dev" ]
 
 jobs:
   build:
@@ -18,15 +18,10 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v3
       with:
-        path: |
-          ~/.npm
-          ${{ github.workspace }}/.next/cache
-        key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
-        restore-keys: |
-          ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-    - run: npm ci
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
     - run: npm run build
