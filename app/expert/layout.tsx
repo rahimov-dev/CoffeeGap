@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import { ReactNode } from 'react';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 export default function layout({
   children,
@@ -9,7 +9,7 @@ export default function layout({
 }) {
   return (
     <>
-      <Header role="expert" />
+      <Header role='expert' />
       {children}
       <Footer />
     </>
