@@ -5,12 +5,14 @@ import ThemeRegistry from "./components/ThemeRegistry";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Provider } from "react-redux";
 //import { store } from "@/redux/store";
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: "KofeGap",
-	description: "Kofegap ...",
+  title: 'KofeGap',
+  description: 'Kofegap ...',
 };
 
 export default function RootLayout({
@@ -18,15 +20,19 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<body className={inter.className}>
+  return (
+    <html lang='en'>
+      <body className={inter.className}>
 				{/*<Provider store={store}>*/}
-				<AppRouterCacheProvider>
-					<ThemeRegistry>{children}</ThemeRegistry>
-				</AppRouterCacheProvider>
+        <AppRouterCacheProvider>
+          <ThemeRegistry>
+            <div className='dark:bg-gray-900 bg-slate-200 dark:text-white'>
+              {children}
+            </div>
+          </ThemeRegistry>
+        </AppRouterCacheProvider>
 				{/*</Provider>*/}
-			</body>
-		</html>
-	);
+      </body>
+    </html>
+  );
 }

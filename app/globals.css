@@ -16,3 +16,18 @@
 	--gradient-color-from: #0284c7;
 	--gradient-color-to: #38bdf8;
 }
+
+:root {
+  --background: rgb(226, 232, 240);
+  --bg-nav: rgb(238, 255, 255);
+}
+
+.dark {
+  --background: rgb(17, 24, 39);
+  --bg-nav: rgb(30, 46, 81);
+}
+
+body {
+  background: var(--background);
+  min-height: 100vh;
+}

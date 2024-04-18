@@ -1,18 +1,10 @@
-"use client";
-
-import { useTheme } from "@emotion/react";
-import Button from "@mui/material/Button";
+import { Container } from '@mui/material';
 
 export default function Home() {
-	const colorMode = useTheme();
-	console.log(colorMode);
-	return (
-		<div>
-			<div className="dark:bg-gray-900 bg-slate-200 h-screen">
-				<Button variant="outlined" onClick={() => {}}>
-					{colorMode?.palette?.mode}
-				</Button>
-			</div>
-		</div>
-	);
+  return (
+    <Container>
+      I don{"'"}t know what to put in this page. Probably, we will
+      redirect the user to the login page from here
+    </Container>
+  );
 }
