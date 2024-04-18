@@ -24,9 +24,7 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeRegistry>
             <div className="dark:bg-gray-900 bg-slate-200 dark:text-white">
-              <Header />
               {children}
-              <Footer />
             </div>
           </ThemeRegistry>
         </AppRouterCacheProvider>
