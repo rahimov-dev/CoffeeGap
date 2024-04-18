@@ -91,6 +91,7 @@ export default function ThemeRegistry({
           value={mode}
           label="Age"
           onChange={handleChange}
+          size="small"
         >
           <MenuItem value={"system"}>System</MenuItem>
           <MenuItem value={"dark"}>Dark</MenuItem>

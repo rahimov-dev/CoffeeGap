@@ -40,7 +40,7 @@ export const getDesignTokens: MyFunctionType = (
           },
           text: {
             primary: "#fff",
-            secondary: grey[500],
+            secondary: grey[100],
           },
         }),
   },
