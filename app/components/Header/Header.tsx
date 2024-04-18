@@ -3,7 +3,11 @@ import Logo from "../icons/Logo";
 import NavMenu from "./NavMenu";
 import Avatar from "./Avatar";
 
-export default function Header() {
+export default function Header({
+  role,
+}: {
+  role: "expert" | "junior";
+}) {
   return (
     <Container>
       <Stack
@@ -12,7 +16,7 @@ export default function Header() {
         justifyContent="space-between"
       >
         <Logo />
-        <NavMenu />
+        <NavMenu role={role} />
         <Avatar />
       </Stack>
     </Container>
