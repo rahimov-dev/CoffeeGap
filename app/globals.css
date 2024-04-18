@@ -4,10 +4,12 @@
 
 :root {
   --background: rgb(226, 232, 240);
+  --bg-nav: rgb(238, 255, 255);
 }
 
 .dark {
   --background: rgb(17, 24, 39);
+  --bg-nav: rgb(30, 46, 81);
 }
 
 body {
