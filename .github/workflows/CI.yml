@@ -5,7 +5,7 @@ name: PR CI
 
 on:  
   pull_request:
-    branches: [ "main", "dev" ]
+    branches: [ "main", "development" ]
 
 jobs:
   build:

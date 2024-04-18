@@ -6,11 +6,11 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "KofeGap",
-  description: "Kofegap ...",
+  title: 'KofeGap',
+  description: 'Kofegap ...',
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={inter.className}>
         <AppRouterCacheProvider>
           <ThemeRegistry>
