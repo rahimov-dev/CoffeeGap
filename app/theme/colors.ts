@@ -1,23 +1,23 @@
-import { Theme } from "@mui/material/styles";
-import { amber, deepOrange, grey } from "@mui/material/colors";
-import { PaletteMode } from "@mui/material";
-import { Inter } from "next/font/google";
+import { Theme } from '@mui/material/styles';
+import { amber, deepOrange, grey } from '@mui/material/colors';
+import { PaletteMode } from '@mui/material';
+import { Inter } from 'next/font/google';
 
 type MyFunctionType = (mode: PaletteMode) => Theme;
 
 const inter = Inter({
-  weight: ["300", "400", "500", "600"],
-  subsets: ["latin", "cyrillic"],
-  display: "swap",
+  weight: ['300', '400', '500', '600'],
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
 });
 
 // @ts-ignore
 export const getDesignTokens: MyFunctionType = (
-  mode: PaletteMode
+  mode: PaletteMode,
 ) => ({
   palette: {
     mode,
-    ...(mode === "light"
+    ...(mode === 'light'
       ? {
           // palette values for light mode
           primary: amber,
@@ -39,7 +39,7 @@ export const getDesignTokens: MyFunctionType = (
             paper: deepOrange[900],
           },
           text: {
-            primary: "#fff",
+            primary: '#fff',
             secondary: grey[100],
           },
         }),

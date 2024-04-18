@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { ReactNode } from "react";
-import styled from "@emotion/styled";
-import { usePathname } from "next/navigation";
+import Link from 'next/link';
+import { ReactNode } from 'react';
+import styled from '@emotion/styled';
+import { usePathname } from 'next/navigation';
 
 type props = {
   active: boolean;
@@ -14,14 +14,14 @@ const StyledLink = styled.span<props>`
   position: relative;
   cursor: pointer;
   &::after {
-    content: "";
+    content: '';
     width: 100%;
     height: 2px;
     position: absolute;
     left: 0;
     bottom: 0;
     transform: ${(props) =>
-      props.active ? "scaleX(1)" : "scaleX(0)"};
+      props.active ? 'scaleX(1)' : 'scaleX(0)'};
     transition: 0.2s ease-in-out;
     background-color: currentColor;
     transform-origin: left;
