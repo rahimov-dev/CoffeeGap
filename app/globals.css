@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: rgb(226, 232, 240);
+}
+
+.dark {
+  --background: rgb(17, 24, 39);
+}
+
+body {
+  background: var(--background);
+  min-height: 100vh;
+}
