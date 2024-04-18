@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-gradient-sky {
+	--gradient-color-from: #38bdf8;
+	--gradient-color-to: #0284c7;
+	background-image: linear-gradient(
+		to right,
+		var(--gradient-color-from),
+		var(--gradient-color-to)
+	);
+}
+
+.bg-gradient-sky-hover:hover {
+	--gradient-color-from: #0284c7;
+	--gradient-color-to: #38bdf8;
+}
