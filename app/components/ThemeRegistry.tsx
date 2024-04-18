@@ -10,47 +10,33 @@ import {
 } from '@mui/material';
 import { getDesignTokens } from '../theme/colors';
 
-type PaletteType = 'light' | 'dark' | 'system';
+type PaletteType = 'light' | 'dark' | 'system' | '';
 
 export default function ThemeRegistry({
   children,
 }: {
   children: ReactNode;
 }) {
-  const [mode, setMode] = useState<PaletteType>('light');
+  const [mode, setMode] = useState<PaletteType>('');
   const [isDark, setIsDark] = useState<boolean>(false);
-  const colorMode = useMemo(
-    () => ({
-      toggleColorMode: () => {
-        setMode((prevMode: PaletteType) => {
-          return prevMode === 'light' ? 'dark' : 'light';
-        });
-      },
-    }),
-    [],
-  );
 
   useEffect(() => {
     if (localStorage.getItem('theme')) {
       const localTheme = localStorage.getItem('theme');
       if (localTheme === 'system') {
         setMode('system');
-        localStorage.setItem('theme', 'system');
       } else if (localTheme === 'dark') {
         setMode('dark');
-        localStorage.setItem('theme', 'dark');
       } else if (localTheme === 'light') {
         setMode('light');
-        localStorage.setItem('theme', 'light');
       }
-    } else {
-      setMode('system');
     }
   }, []);
 
   useEffect(() => {
     if (mode) {
       if (mode === 'system') {
+        localStorage.theme = 'system';
         if (
           window.matchMedia('(prefers-color-scheme: dark)').matches
         ) {
@@ -60,19 +46,20 @@ export default function ThemeRegistry({
         }
       } else if (mode === 'dark') {
         setIsDark(true);
+        localStorage.theme = 'dark';
       } else if (mode === 'light') {
         setIsDark(false);
+        localStorage.theme = 'light';
       }
     }
   }, [mode]);
 
-  useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDark]);
+  if (isDark) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+
   const theme = useMemo(
     () => createTheme(getDesignTokens(isDark ? 'dark' : 'light')),
     [isDark],

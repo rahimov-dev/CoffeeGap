@@ -13,6 +13,15 @@ const StyledLink = styled.span<props>`
   font-size: 20px;
   position: relative;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  flex-direction: column;
+  padding: 5px 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background: ${(props) => (props.active ? 'var(--bg-nav)' : '')};
+  color: ${(props) => (props.active ? 'rgb(241, 183, 7)' : '')};
   &::after {
     content: '';
     width: 100%;
@@ -46,7 +55,10 @@ export default function NavLink({
 
   return (
     <Link key={index} href={path}>
-      <StyledLink active={path === pathname}>{label}</StyledLink>
+      <StyledLink active={path === pathname}>
+        <span>{icon}</span>
+        {label}
+      </StyledLink>
     </Link>
   );
 }
