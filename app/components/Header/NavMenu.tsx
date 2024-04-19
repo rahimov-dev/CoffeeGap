@@ -58,16 +58,12 @@ export default function NavMenu({
   ];
   const NavMenu = role === 'expert' ? NavMenuExpert : NavMenuJunior;
   return (
-    <Stack
-      justifyContent='center'
-      flexDirection='row'
-      alignItems='center'
-      gap='3rem'
-      className='hidden lg:block'
-    >
-      {NavMenu.map((nav, index) => (
-        <NavLink {...nav} key={index} index={index} />
-      ))}
-    </Stack>
+    <div className='fixed bottom-0 left-0 w-full bg-white lg:bg-transparent lg:static lg:block'>
+      <div className='flex justify-around lg:gap-[3rem] lg:justify-center lg:items-center'>
+        {NavMenu.map((nav, index) => (
+          <NavLink {...nav} key={index} index={index} />
+        ))}
+      </div>
+    </div>
   );
 }

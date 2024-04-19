@@ -13,7 +13,7 @@
 }
 
 .bg-gradient-amber-hover:hover {
---gradient-color-from: #d97706;
+  --gradient-color-from: #d97706;
   --gradient-color-to: #fbbf24;
 }
 
