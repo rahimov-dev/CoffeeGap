@@ -54,11 +54,13 @@ export default function ThemeRegistry({
     }
   }, [mode]);
 
-  if (isDark) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDark]);
 
   const theme = useMemo(
     () => createTheme(getDesignTokens(isDark ? 'dark' : 'light')),
