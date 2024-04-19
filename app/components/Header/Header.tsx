@@ -2,6 +2,7 @@ import { Container, Stack } from '@mui/material';
 import Logo from '../icons/Logo';
 import NavMenu from './NavMenu';
 import Avatar from './Avatar';
+import ThemeSwitcher from '../ThemeSwitcher';
 
 export default function Header({
   role,
@@ -17,6 +18,7 @@ export default function Header({
       >
         <Logo />
         <NavMenu role={role} />
+        <ThemeSwitcher />
         <Avatar />
       </Stack>
     </Container>

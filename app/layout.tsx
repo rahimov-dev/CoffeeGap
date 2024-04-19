@@ -3,9 +3,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import ThemeRegistry from './components/ThemeRegistry';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import { ReduxProvider } from "@/redux/provider";
+import StoreProvider from '@/lib/redux/StoreProvider';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,15 +21,15 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-          <ReduxProvider>
-        <AppRouterCacheProvider>
-          <ThemeRegistry>
-            <div className='dark:bg-gray-900 bg-slate-200 dark:text-white'>
-              {children}
-            </div>
-          </ThemeRegistry>
-        </AppRouterCacheProvider>
-          </ReduxProvider>
+        <StoreProvider>
+          <AppRouterCacheProvider>
+            <ThemeRegistry>
+              <div className='dark:bg-gray-900 bg-slate-200 dark:text-white'>
+                {children}
+              </div>
+            </ThemeRegistry>
+          </AppRouterCacheProvider>
+        </StoreProvider>
       </body>
     </html>
   );
