@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import ThemeRegistry from "./components/ThemeRegistry";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import { Provider } from "react-redux";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import ThemeRegistry from './components/ThemeRegistry';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { Provider } from 'react-redux';
 //import { store } from "@/redux/store";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
   return (
     <html lang='en'>
       <body className={inter.className}>
-				{/*<Provider store={store}>*/}
+        {/*<Provider store={store}>*/}
         <AppRouterCacheProvider>
           <ThemeRegistry>
             <div className='dark:bg-gray-900 bg-slate-200 dark:text-white'>
@@ -31,7 +31,7 @@ export default function RootLayout({
             </div>
           </ThemeRegistry>
         </AppRouterCacheProvider>
-				{/*</Provider>*/}
+        {/*</Provider>*/}
       </body>
     </html>
   );
