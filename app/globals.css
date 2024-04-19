@@ -3,23 +3,24 @@
 @tailwind utilities;
 
 .bg-gradient-sky {
-	--gradient-color-from: #38bdf8;
-	--gradient-color-to: #0284c7;
-	background-image: linear-gradient(
-		to right,
-		var(--gradient-color-from),
-		var(--gradient-color-to)
-	);
+  --gradient-color-from: #38bdf8;
+  --gradient-color-to: #0284c7;
+  background-image: linear-gradient(
+    to right,
+    var(--gradient-color-from),
+    var(--gradient-color-to)
+  );
 }
 
 .bg-gradient-sky-hover:hover {
-	--gradient-color-from: #0284c7;
-	--gradient-color-to: #38bdf8;
+  --gradient-color-from: #0284c7;
+  --gradient-color-to: #38bdf8;
 }
 
 :root {
   --background: rgb(226, 232, 240);
   --bg-nav: rgb(238, 255, 255);
+  --white-text: rgba(255, 255, 255, 0.85);
 }
 
 .dark {
@@ -31,3 +32,75 @@ body {
   background: var(--background);
   min-height: 100vh;
 }
+
+/* Loader css - start */
+
+.loader-23 {
+  --dim: 3rem;
+  width: var(--dim);
+  height: var(--dim);
+  position: relative;
+  animation: spin988 2s linear infinite;
+}
+
+.loader-23 .circle-23 {
+  --color: #333;
+  --dim: 1.2rem;
+  width: var(--dim);
+  height: var(--dim);
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.dark .loader-23 .circle-23 {
+  --color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.loader-23 .circle-23:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.loader-23 .circle-23:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.loader-23 .circle-23:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.loader-23 .circle-23:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes spin988 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  20%,
+  25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+
+  45%,
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  70%,
+  75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+
+  95%,
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* Loader css - end */

@@ -31,9 +31,8 @@ const StyledLink = styled.span<props>`
     bottom: 0;
     transform: ${(props) =>
       props.active ? 'scaleX(1)' : 'scaleX(0)'};
-    transition: 0.2s ease-in-out;
+    transition: 0.4s ease;
     background-color: currentColor;
-    transform-origin: left;
   }
   &:hover::after {
     transform: scaleX(1);
