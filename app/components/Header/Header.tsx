@@ -18,8 +18,10 @@ export default function Header({
       >
         <Logo />
         <NavMenu role={role} />
-        <ThemeSwitcher />
-        <Avatar />
+        <div className='flex items-center gap-10'>
+          <ThemeSwitcher />
+          <Avatar />
+        </div>
       </Stack>
     </Container>
   );
