@@ -9,6 +9,7 @@ interface IUser {
   profession: string;
   role: 'junior' | 'expert';
   skills?: string[];
+  description: string;
 }
 
 export default function page() {
@@ -19,6 +20,7 @@ export default function page() {
       profession: 'Front-End developer',
       role: 'junior',
       skills: ['HTML', 'CSS', 'JavaScript', 'React.js'],
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi sed nesciunt rem similique iure. Id animi enim iste ducimus magni! Modi culpa provident ullam, quaerat accusamus cupiditate?",
     },
     {
       image: '/assets/Images/user-2.jpg',
@@ -26,6 +28,7 @@ export default function page() {
       profession: 'UI/UX Designer',
       role: 'junior',
       skills: ['HTML', 'CSS', 'Figma', 'React.js'],
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi sed nesciunt rem similique iure. Id animi enim iste ducimus magni! Modi culpa provident ullam, quaerat accusamus cupiditate?",
     },
     {
       image: '/assets/Images/user-3.jpeg',
@@ -33,15 +36,23 @@ export default function page() {
       profession: 'Project Manager',
       role: 'junior',
       skills: ['HTML', 'CSS', 'JavaScript', 'React.js'],
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eligendi sed nesciunt rem similique iure. Id animi enim iste ducimus magni! Modi culpa provident ullam, quaerat accusamus cupiditate?",
     },
   ];
+
+  const shortenDescription = (
+		description: string,
+	): string => {
+			return `${description.split(" ").slice(0, 14).join(" ")}...`;
+	};
+
   return (
     <main>
       <Container>
         <Stack gap='1rem' flexDirection='row' paddingTop='1rem'>
           <div className='w-[70%]'>
             <Typography
-              variant='h4'
+              variant='h5'
               fontWeight='bold'
               className='text-[var(--text-primary)]'
             >
@@ -56,7 +67,7 @@ export default function page() {
               {usersData.map((user, index) => (
                 <div
                   key={index}
-                  className='rounded-md shadow-md border-t-2 border-sky-500 w-full'
+                  className='rounded-md shadow-md border-t-2 border-amber-400 w-full'
                 >
                   <div className='border-b p-2 flex items-end'>
                     <Image
@@ -66,7 +77,7 @@ export default function page() {
                       height={50}
                       quality='95'
                       priority={true}
-                      className='border-b-4 border-sky-600 w-[4.5rem] h-[4.5rem] rounded-full object-cover'
+                      className='border-b-4 border-amber-400 w-[4.5rem] h-[4.5rem] rounded-full object-cover'
                     />
 
                     <div className='ml-4 tracking-wider'>
@@ -80,16 +91,12 @@ export default function page() {
                     <p className='text-gray-600 text-lg font-semibold'>
                       {user.profession}
                     </p>
-                    <p className='h-[18vh] text-sky-900 text-sm py-1'>
-                      Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Quo eligendi sed nesciunt rem
-                      similique iure. Id animi enim iste ducimus
-                      magni! Modi culpa provident ullam, quaerat
-                      accusamus cupiditate?
+                    <p className='text-gray-500 text-sm py-1'>
+                     {shortenDescription(user.description)}
                     </p>
 
-                    <button className='flex items-center mt-4 bg-gradient-sky bg-gradient-sky-hover text-white font-semibold rounded-md py-1 px-2 tracking-wider cursor-pointer'>
-                      <AiFillThunderbolt className='mr-1 text-yellow-300' />
+                    <button className='mt-4 bg-gradient-amber bg-gradient-amber-hover text-white font-semibold rounded-md py-1 px-4 
+                    tracking-wider cursor-pointer'>
                       Junior
                     </button>
                   </div>
@@ -100,14 +107,14 @@ export default function page() {
 
           <div className='w-[30%]'>
             <Typography
-              variant='h4'
+              variant='h5'
               fontWeight='bold'
               className='text-[var(--text-primary)]'
             >
               Colleagues
             </Typography>
             <div className='my-4 flex flex-col gap-y-4'>
-              <div className='rounded-md shadow-md border-t-2 border-sky-500'>
+              <div className='rounded-md shadow-md border-t-2 border-amber-400'>
                 <div className='flex items-center p-2 tracking-wider'>
                   <h2 className='mx-2 font-semibold text-gray-700'>
                     Steve
@@ -116,7 +123,7 @@ export default function page() {
                 </div>
               </div>
 
-              <div className='rounded-md shadow-md border-t-2 border-sky-500'>
+              <div className='rounded-md shadow-md border-t-2 border-amber-400'>
                 <div className='flex items-center p-2 tracking-wider'>
                   <h2 className='mx-2 font-semibold text-gray-700'>
                     Julia
@@ -125,7 +132,7 @@ export default function page() {
                 </div>
               </div>
 
-              <div className='rounded-md shadow-md border-t-2 border-sky-500'>
+              <div className='rounded-md shadow-md border-t-2 border-amber-400'>
                 <div className='flex items-center p-2 tracking-wider'>
                   <h2 className='mx-2 font-semibold text-gray-700'>
                     Alex
@@ -134,21 +141,12 @@ export default function page() {
                 </div>
               </div>
 
-              <div className='rounded-md shadow-md border-t-2 border-sky-500'>
+              <div className='rounded-md shadow-md border-t-2 border-amber-400'>
                 <div className='flex items-center p-2 tracking-wider'>
                   <h2 className='mx-2 font-semibold text-gray-700'>
                     Julia
                   </h2>
                   <p className='text-sky-900'>Software Engineer</p>
-                </div>
-              </div>
-
-              <div className='rounded-md shadow-md border-t-2 border-sky-500'>
-                <div className='flex items-center p-2 tracking-wider'>
-                  <h2 className='mx-2 font-semibold text-gray-700'>
-                    Steve
-                  </h2>
-                  <p className='text-sky-900'>Marketolg</p>
                 </div>
               </div>
             </div>

@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-gradient-sky {
-  --gradient-color-from: #38bdf8;
-  --gradient-color-to: #0284c7;
+.bg-gradient-amber {
+  --gradient-color-from: #fbbf24;
+  --gradient-color-to: #d97706;
   background-image: linear-gradient(
     to right,
     var(--gradient-color-from),
@@ -12,9 +12,9 @@
   );
 }
 
-.bg-gradient-sky-hover:hover {
-  --gradient-color-from: #0284c7;
-  --gradient-color-to: #38bdf8;
+.bg-gradient-amber-hover:hover {
+--gradient-color-from: #d97706;
+  --gradient-color-to: #fbbf24;
 }
 
 :root {
