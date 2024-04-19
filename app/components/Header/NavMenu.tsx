@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 import NavLink from './NavLink';
 import { Stack } from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';
-import ChatIcon from '@mui/icons-material/Chat';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import SourceIcon from '@mui/icons-material/Source';
+import { IoHomeSharp as HomeIcon } from 'react-icons/io5';
+import { IoChatbubbleEllipsesSharp as ChatIcon } from 'react-icons/io5';
+import { RiCalendarScheduleFill as CalendarMonthIcon } from 'react-icons/ri';
+import { MdSource as SourceIcon } from 'react-icons/md';
 
 interface INav {
   path: string;

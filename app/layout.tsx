@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import ThemeRegistry from "./components/ThemeRegistry";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import ThemeRegistry from './components/ThemeRegistry';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import { ReduxProvider } from "@/redux/provider";
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
   return (
     <html lang='en'>
