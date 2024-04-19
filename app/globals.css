@@ -21,11 +21,13 @@
   --background: rgb(226, 232, 240);
   --bg-nav: rgb(238, 255, 255);
   --white-text: rgba(255, 255, 255, 0.85);
+  --text-primary: rgb(31, 41, 55);
 }
 
 .dark {
   --background: rgb(17, 24, 39);
   --bg-nav: rgb(30, 46, 81);
+  --text-primary: rgba(255, 255, 255, 0.85);
 }
 
 body {
@@ -104,3 +106,47 @@ body {
 }
 
 /* Loader css - end */
+
+/* Logo css  - start*/
+
+.st0 {
+  fill: #fff7e2;
+}
+.st1 {
+  fill: #271707;
+}
+.st2 {
+  fill: #e8914e;
+}
+.st3 {
+  fill: #9f4d1b;
+}
+.st4 {
+  fill: #efb886;
+}
+.st5 {
+  fill: #ce7435;
+}
+.st6 {
+  fill: #562c0a;
+}
+.st7 {
+  fill: #e28548;
+}
+.st8 {
+  fill: #0094ef;
+}
+.st9 {
+  fill: #ffffff;
+}
+.st10 {
+  fill: #e27324;
+}
+.st11 {
+  fill: #fbfcf7;
+}
+.st12 {
+  fill: #271606;
+}
+
+/* Logo css - end */
