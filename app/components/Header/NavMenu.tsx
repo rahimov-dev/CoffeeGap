@@ -59,7 +59,7 @@ export default function NavMenu({
   const NavMenu = role === 'expert' ? NavMenuExpert : NavMenuJunior;
   return (
     <div className='fixed bottom-0 left-0 w-full bg-white lg:bg-transparent lg:static lg:block'>
-      <div className='flex justify-around lg:gap-[3rem] lg:justify-center lg:items-center'>
+      <div className='flex justify-around lg:gap-[3rem] h-[4rem] dark:bg-slate-800 dark:lg:bg-transparent lg:justify-center lg:items-center'>
         {NavMenu.map((nav, index) => (
           <NavLink {...nav} key={index} index={index} />
         ))}

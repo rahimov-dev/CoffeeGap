@@ -23,7 +23,7 @@ export default function RootLayout({
         <StoreProvider>
           <AppRouterCacheProvider>
             <ThemeRegistry>
-              <div className='dark:bg-gray-900 bg-slate-200 dark:text-white'>
+              <div className='dark:bg-gray-900 bg-slate-200 dark:text-[var(--white-text)]'>
                 {children}
               </div>
             </ThemeRegistry>
