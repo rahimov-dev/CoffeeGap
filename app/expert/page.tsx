@@ -1,6 +1,5 @@
 import { Container, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
-import { AiFillThunderbolt } from 'react-icons/ai';
 
 interface IUser {
   image: string;
@@ -50,7 +49,7 @@ export default function page() {
   return (
     <main>
       <Container>
-        <div className='flex gap-[1rem] pt-[1rem] flex-col lg:flex-row'>
+        <div className='flex gap-[1rem] mt-[3rem] flex-col lg:flex-row'>
           <div className='lg:w-[70%]'>
             <Typography
               variant='h5'
