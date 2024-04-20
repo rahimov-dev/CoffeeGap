@@ -5,7 +5,6 @@ import ThemeRegistry from './components/ThemeRegistry';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import StoreProvider from '@/lib/redux/StoreProvider';
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
