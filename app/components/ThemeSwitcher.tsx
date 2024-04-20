@@ -31,6 +31,11 @@ export default function ThemeSwitcher() {
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     dispatch(setIsDark(event.target.checked));
+    if (event.target.checked) {
+      localStorage.theme = 'dark';
+    } else {
+      localStorage.theme = 'light';
+    }
   };
 
   return (
